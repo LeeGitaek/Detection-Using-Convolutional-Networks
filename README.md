@@ -11,7 +11,7 @@
 
 - Issue 1 => Model Parameters Issue, [https://github.com/LeeGitaek/Detection-Using-Convolutional-Networks/issues/1]
 
-### Model Structure
+## Model Structure
 
 - Layer 1
    => Conv + Max Pooling, <br>
