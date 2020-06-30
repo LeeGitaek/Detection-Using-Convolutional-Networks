@@ -5,3 +5,8 @@
 #### Apple 의 An On-device Deep Neural Network for Face Detection 에 사용 및 참고된 논문을 구현하는 프로젝트입니다.
 - Vol. 1, Issue 7 ∙ November 2017 
 - by Computer Vision Machine Learning Team
+
+
+#### Issues List
+
+- Issue 1 => Model Parameters Issue (k)[https://github.com/LeeGitaek/Detection-Using-Convolutional-Networks/issues/1]
