@@ -9,4 +9,4 @@
 
 #### Issues List
 
-- Issue 1 => Model Parameters Issue (k)[https://github.com/LeeGitaek/Detection-Using-Convolutional-Networks/issues/1]
+- Issue 1 => Model Parameters Issue, [https://github.com/LeeGitaek/Detection-Using-Convolutional-Networks/issues/1]
