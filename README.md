@@ -14,85 +14,85 @@
 ### Model Structure
 
 - Layer 1
-   => Conv + Max Pooling, 
-      Channel => 96, 
-      Filter size (Kernel) => 11 * 11, 
-      Conv Stride => 4 * 4, 
-      Pooling Size => 2 * 2, 
-      Pooling Stride => 2 * 2,
-      Zero Padding Size => -,
-      Spartial Input Size => 231 * 231
+   => Conv + Max Pooling, <br>
+      Channel => 96, <br>
+      Filter size (Kernel) => 11 * 11, <br>
+      Conv Stride => 4 * 4, <br>
+      Pooling Size => 2 * 2, <br>
+      Pooling Stride => 2 * 2, <br>
+      Zero Padding Size => -, <br>
+      Spartial Input Size => 231 * 231 <br>
       
       
 - Layer 2
-   => Conv + Max Pooling, 
-      Channel => 256, 
-      Filter size (Kernel) => 5 * 5, 
-      Conv Stride => 1 * 1, 
-      Pooling Size => 2 * 2, 
-      Pooling Stride => 2 * 2,
-      Zero Padding Size => -,
-      Spartial Input Size => 24 * 24
+   => Conv + Max Pooling, <br>
+      Channel => 256, <br>
+      Filter size (Kernel) => 5 * 5, <br>
+      Conv Stride => 1 * 1, <br>
+      Pooling Size => 2 * 2, <br>
+      Pooling Stride => 2 * 2, <br>
+      Zero Padding Size => -, <br>
+      Spartial Input Size => 24 * 24 <br>
       
       
 - Layer 3
-   => Conv,
-      Channel => 512, 
-      Filter size (Kernel) => 3 * 3, 
-      Conv Stride => 1 * 1, 
-      Pooling Size => -, 
-      Pooling Stride => -,
-      Zero Padding Size => 1 * 1 * 1 * 1,
-      Spartial Input Size => 12 * 12
+   => Conv, <br>
+      Channel => 512, <br>
+      Filter size (Kernel) => 3 * 3, <br>
+      Conv Stride => 1 * 1, <br>
+      Pooling Size => -, <br>
+      Pooling Stride => -, <br>
+      Zero Padding Size => 1 * 1 * 1 * 1, <br>
+      Spartial Input Size => 12 * 12 <br>
       
 - Layer 4
-   => Conv,
-      Channel => 1024, 
-      Filter size (Kernel) => 3 * 3, 
-      Conv Stride => 1 * 1, 
-      Pooling Size => -, 
-      Pooling Stride => -,
-      Zero Padding Size => 1 * 1 * 1 * 1,
-      Spartial Input Size => 12 * 12
+   => Conv, <br>
+      Channel => 1024, <br>
+      Filter size (Kernel) => 3 * 3, <br>
+      Conv Stride => 1 * 1, <br>
+      Pooling Size => -, <br>
+      Pooling Stride => -, <br>
+      Zero Padding Size => 1 * 1 * 1 * 1, <br>
+      Spartial Input Size => 12 * 12 <br>
       
 - Layer 5
-   => Conv + Max Pooling,
-      Channel => 1024, 
-      Filter size (Kernel) => 3 * 3, 
-      Conv Stride => 1 * 1, 
-      Pooling Size => 2 * 2, 
-      Pooling Stride => 2 * 2,
-      Zero Padding Size => 1 * 1 * 1 * 1,
-      Spartial Input Size => 12 * 12
+   => Conv + Max Pooling, <br>
+      Channel => 1024, <br>
+      Filter size (Kernel) => 3 * 3, <br>
+      Conv Stride => 1 * 1, <br>
+      Pooling Size => 2 * 2, <br>
+      Pooling Stride => 2 * 2, <br>
+      Zero Padding Size => 1 * 1 * 1 * 1, <br>
+      Spartial Input Size => 12 * 12 <br>
      
 #### FC ( Fully Connected Layer )
 - Layer 6
-   => Full ,
-      Channel => 3072, 
-      Filter size (Kernel) => -, 
-      Conv Stride => -, 
-      Pooling Size => -, 
-      Pooling Stride => -,
-      Zero Padding Size => -,
-      Spartial Input Size => 6 * 6
+   => Full , <br>
+      Channel => 3072, <br>
+      Filter size (Kernel) => -, <br>
+      Conv Stride => -, <br>
+      Pooling Size => -, <br>
+      Pooling Stride => -, <br>
+      Zero Padding Size => -, <br>
+      Spartial Input Size => 6 * 6 <br>
    
 - Layer 7
-   => Full ,
-      Channel => 4096, 
-      Filter size (Kernel) => -, 
-      Conv Stride => -, 
-      Pooling Size => -, 
-      Pooling Stride => -,
-      Zero Padding Size => -,
-      Spartial Input Size => 1 * 1
+   => Full , <br>
+      Channel => 4096, <br>
+      Filter size (Kernel) => -, <br>
+      Conv Stride => -, <br>
+      Pooling Size => -, <br>
+      Pooling Stride => -, <br>
+      Zero Padding Size => -, <br>
+      Spartial Input Size => 1 * 1 <br>
       
 #### Output Layer 
 - Layer 8
    => Full ,
-      Channel => 1000, 
-      Filter size (Kernel) => -, 
-      Conv Stride => -, 
-      Pooling Size => -, 
-      Pooling Stride => -,
-      Zero Padding Size => -,
-      Spartial Input Size => 1 * 1
+      Channel => 1000, <br>
+      Filter size (Kernel) => -, <br>
+      Conv Stride => -, <br>
+      Pooling Size => -, <br>
+      Pooling Stride => -, <br>
+      Zero Padding Size => -, <br>
+      Spartial Input Size => 1 * 1 <br>
