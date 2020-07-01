@@ -24,10 +24,10 @@ if device == 'cuda':
 
 """Model Parameters"""
 
-# Model Parameters 
+# Model Parameters
 
 learning_rate = 0.05
-training_epochs = 30 
+training_epochs = 30
 #[30,40,50,60,70,80]
 batch_size = 100
 drop_prob = 0.5
@@ -38,16 +38,58 @@ class Detection_Convolutional_Network(torch.nn.Module):
     def __init__(self):
       super(Detection_Convolutional_Network,self).__init__()
 
-    
-      self.layer1 = torch.nn.Sequential(
-        # output size of layer 1 = (N-F)/Stride + 1 = (96 - 11) / 4 + 1 = 23.22
+      # torch.nn as nn
+      # output size of layer 2 = (N-F)/Stride + 1
+
+      self.layer1 = nn.Sequential(
         torch.nn.Conv2d(1,96,kernel_size=11,stride=4,padding=0),
         torch.nn.ReLU(),
         torch.nn.MaxPool2d(kernel_size=2,stride=2)
       )
 
-      #self.fc_layer6 = torch.nn.Linear(0,0,bias=True)
-      #torch.nn.init.kaiming_uniform(self.fc.weight)
+      self.layer2 = nn.Sequential(
+          nn.Conv2d(96,256,kernel_size=5,stride=1,padding=0)
+          nn.ReLU()
+          nn.MaxPool2d(kernel_size=2,stride=2)
+      )
+
+      self.layer3 = nn.Sequential(
+
+          nn.Conv2d(256,512,kernel_size=3,stride=1,padding=0)
+          nn.ReLU()
+      )
+
+      self.layer4 = nn.Sequential(
+
+          nn.Conv2d(512,1024,kernel_size=3,stride=1,padding=1)
+          nn.ReLU()
+      )
+
+      self.layer5 = nn.Sequential(
+        torch.nn.Conv2d(1024,1024,kernel_size=3,stride=1,padding=1),
+        torch.nn.ReLU(),
+        torch.nn.MaxPool2d(kernel_size=2,stride=2)
+      )
+
+      self.fc_layer6 = nn.Linear(1024,3072,bias=True)
+      self.fc_layer7 = nn.Linear(3072,4096,bias=True)
+
+      #output fully connected layer
+      self.fc_layer8 = nn.Linear(4096,1000,bias=True)
+
+      nn.init.kaiming_uniform(self.fc_layer6.weight)
+      nn.init.kaiming_uniform(self.fc_layer7.weight)
+
+      #output layer weight - kaiming uniform
+      nn.init.kaiming_uniform(self.fc_layer8.weight)
+
     def forward(self , x):
         out = self.layer1(x)
+        out = self.layer2(out)
+        out = self.layer3(out)
+        out = self.layer4(out)
+        out = self.layer5(out)
+        out = self.layer6(out)
+        out = self.layer7(out)
+        out = self.layer8(out)
         return out
