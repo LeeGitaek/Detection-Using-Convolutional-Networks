@@ -5,7 +5,8 @@
 #### Apple 의 An On-device Deep Neural Network for Face Detection 에 사용 및 참고된 논문을 구현하는 프로젝트입니다.
 - Vol. 1, Issue 7 ∙ November 2017 
 - By Computer Vision Machine Learning Team
-- Link : https://arxiv.org/pdf/1312.6229.pdf
+- Paper Link : https://arxiv.org/pdf/1312.6229.pdf
+- journal link: https://machinelearning.apple.com/2017/11/16/face-detection.html
 
 #### Issues List 
 
