@@ -6,7 +6,7 @@
 - Vol. 1, Issue 7 ∙ November 2017 
 - By Computer Vision Machine Learning Team
 - Paper Link : https://arxiv.org/pdf/1312.6229.pdf
-- journal link: https://machinelearning.apple.com/2017/11/16/face-detection.html
+- Journal Link: https://machinelearning.apple.com/2017/11/16/face-detection.html
 
 #### Issues List 
 
